@@ -4,6 +4,10 @@ import cors from "cors";
 import chatRouter from "./chat/chat.js";
 import prepRouter from "./prep/prep.js";
 import screenerRouter from "../../screener/screenerRoute.js";  
+import ragRoute from "./screener/ragRoute.js";
+
+app.use("/rag", ragRoute);
+
 
 dotenv.config();
 
