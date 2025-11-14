@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# EndoIRIS — AI-Assisted Support for Endometriosis Care
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EndoIRIS is an AI-powered platform that helps people make sense of years of symptoms, portal notes, and scattered health data. It transforms messy records into a clear, clinic-ready story using retrieval-augmented generation (RAG), document embeddings, and a medication-aware conversational agent.
 
-Currently, two official plugins are available:
+EndoIRIS does **not** diagnose disease.  
+It organizes, retrieves, and explains information so patients can advocate for themselves in the exam room.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1) Endo Screener (RAG-Based Pattern Extractor)
 
-## Expanding the ESLint configuration
+A retrieval-augmented screening tool that analyzes uploaded health documents (PDF/TXT/MyChart exports) and patient-entered symptom descriptions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Inputs**
+- PDFs or TXT files from MyChart, lab reports, clinical notes
+- Free-text symptom descriptions
+- Quick symptom survey
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Outputs**
+- Pattern alignment (non-diagnostic)
+- Red flags
+- Possible subtype patterns
+- Cycle-phase relevance
+- Misdiagnosis pitfalls (IBS, IC, PID)
+- Visit-ready talking points
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Why this matters**
+- Tight RAG → minimal hallucination  
+- Uses embeddings over user documents  
+- Extremely judge-friendly demo (upload → patterns → prep sheet)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2) IRIS — Medication + Care Chatbot
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+A real-time conversational assistant trained to help users understand:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Medication side effects  
+- Dosage issues  
+- Concerning symptoms  
+- Cycle-phase changes  
+- How to track symptoms effectively  
+- What to ask clinicians  
+- How to phrase concerns to avoid dismissal  
+
+**IRIS does NOT diagnose.**  
+She provides:
+- Known side effects  
+- Clinically relevant interactions  
+- When to talk to a doctor  
+- Safe alternative phrasing to advocate for yourself  
+
+**What IRIS uses**
+- A small curated RAG corpus (clinically validated medication info + guidelines)
+- Uploaded user documents
+- Symptom descriptions
+- Cycle information
+
+**Why it’s easy to build**
+- It’s a prompted Claude chatbot with retrieval  
+- No feature engineering  
+- Embedding pipeline already exists  
+
+---
+
+## Architecture Overview
+
+### Frontend
+- React + TypeScript  
+- Pages: Home, Upload, Results  
+- File uploader for PDFs + symptom survey  
+- Renders screener results from backend JSON
+
+### Backend
+- Node.js + Express  
+- Claude API (Anthropic)  
+- RAG pipeline:
+  - Extract → chunk → embed uploaded text  
+  - Retrieve top-k relevant records  
+  - Generate clinical pattern summaries  
+
+### Endpoints (example)
