@@ -1,0 +1,101 @@
+Patient Name: [REDACTED]
+DOB: [REDACTED]
+Visit Date: 03/12/2024
+Department: Gynecology
+
+CHIEF COMPLAINT:
+Severe menstrual pain, chronic pelvic pain, pain with bowel movements during periods.
+
+HISTORY OF PRESENT ILLNESS:
+Patient reports progressively worsening dysmenorrhea over the past 3 years. Pain begins 1–2 days before menses and lasts through day 4. Describes pain as “stabbing” and “radiating to lower back.” Over-the-counter NSAIDs provide limited relief.
+
+Reports pelvic pain throughout the month, with flares mid-cycle and around menstruation. Pain interferes with school activities and occasionally requires missing work.
+
+Reports pain with deep penetration during intercourse for the last 6–8 months.
+
+Reports constipation and severe pain with bowel movements during menstruation. Denies rectal bleeding.
+
+GI symptoms (bloating, nausea) worsen premenstrually.
+
+MENSTRUAL HISTORY:
+Cycle length: 27–29 days
+Bleeding duration: 6–7 days
+Flow: Heavy days 1–3, changes pad every 2–3 hours
+Clots present
+
+PAST MEDICAL HISTORY:
+None significant.
+
+MEDICATIONS:
+Ibuprofen 600 mg PRN pain with minimal improvement.
+
+IMAGING:
+Pelvic ultrasound (2022) unremarkable, normal uterus and ovaries.
+
+ASSESSMENT/PLAN:
+Chronic pelvic pain with dysmenorrhea. Possible etiologies discussed include endometriosis, adenomyosis, or pelvic floor dysfunction. Recommended trial of combined oral contraceptive pills. Patient declined at this time, prefers further evaluation.
+
+
+MyChart Symptom Tracker Export
+Date Range: 01/01/2023 – 05/01/2024
+
+REPORTED SYMPTOMS:
+
+Menstrual Pain:
+- 01/2023: severe cramps, missed 1 day of school
+- 06/2023: pain 8/10 during menses
+- 11/2023: pain radiating to legs, nausea
+- 03/2024: bedridden for 2 days, vomiting
+
+Pelvic Pain (non-period):
+- 02/2023: dull pelvic ache daily for 2 weeks
+- 09/2023: pain spike mid-cycle, lasted several hours
+- 02/2024: daily pelvic pain rated 6/10
+
+GI Symptoms:
+- Recurrent bloating around cycle
+- Diarrhea day before period
+- Constipation during menstrual days 1–3
+
+Genitourinary:
+- Burning sensation with urination around period (2 cycles)
+- Increased urgency but normal urinalysis
+
+Sexual Health:
+- Pain with deep penetration intermittently since late 2023
+- Worse around menses
+
+Medications Tried:
+- Ibuprofen, naproxen, heat therapy
+Limited relief.
+
+DOCUMENTED PATIENT NOTES:
+“Pain makes it hard to focus in class.”
+“I canceled 2 social events last month due to pelvic pain.”
+“Feels like something is pulling inside during sex.”
+
+
+Primary Care Office Visit Summary
+Date: 10/02/2023
+
+LABS:
+CBC: within normal limits
+CRP: 2.4 (slightly elevated)
+ESR: 18 (upper-normal)
+TSH: normal
+Ferritin: 32 (low-normal)
+
+UA: normal, no infection
+
+NOTES:
+Labs overall unremarkable except mild inflammation.
+
+IMAGING:
+Pelvic Ultrasound (09/20/2023):
+- Uterus: normal size, normal contour
+- Ovaries: normal, no cysts
+- No free fluid
+Interpretation: No abnormalities identified.
+
+ASSESSMENT:
+Pain not explained by labs or ultrasound. Recommended referral to gynecology.
